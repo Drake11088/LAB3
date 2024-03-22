@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Threading;
 using Unity.Profiling.Editor;
+using Unity.VisualScripting;
 
 public class SquareController : MonoBehaviour
 {
@@ -53,6 +54,12 @@ public class SquareController : MonoBehaviour
         {
             Debug.Log("xxxx");
             LoadNextScene();
+        }
+        if(collision.gameObject.name.Equals("PinWheel"))
+        {
+            Debug.Log("XXXX");
+            Vector2 firstPosition = new Vector2(-6, 1);
+            transform.position = firstPosition;
         }
     }
 }
