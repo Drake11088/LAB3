@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -40,14 +40,14 @@ public class SquareController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(horizontal, vertical, 0f).normalized;
-        transform.Translate(translation: movement * 5f * Time.deltaTime);
+        transform.Translate(translation: movement * 3f * Time.deltaTime);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.name.Equals("Circle"))
         {
             Debug.Log("XXXX");
-            Vector2 firstPosition = new Vector2(-6, 1);
+            Vector2 firstPosition = new Vector2(0, 4);
             transform.position = firstPosition;
         }
         if(collision.gameObject.name.Equals("Box"))
@@ -58,8 +58,24 @@ public class SquareController : MonoBehaviour
         if(collision.gameObject.name.Equals("PinWheel"))
         {
             Debug.Log("XXXX");
-            Vector2 firstPosition = new Vector2(-6, 1);
+            Vector2 firstPosition = new Vector2(0, 4);
             transform.position = firstPosition;
         }
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("MapEdge"))
+        {
+            Debug.Log("xxxxxx");
+            Vector2 firstPosition = new Vector2(0, 4);
+            transform.position = firstPosition;
+        }
+        if(collision.gameObject.name.Equals("MapEdge"))
+        {
+            Debug.Log("XXXX");
+            Vector2 firstPosition = new Vector2(0, 4);
+            transform.position = firstPosition;
+        }    
     }
 }
