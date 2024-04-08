@@ -9,6 +9,7 @@ TagManager:
   - Box
   - MapEdge
   - PinWheel
+  - Bullet
   layers:
   - Default
   - TransparentFX

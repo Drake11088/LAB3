@@ -1065,6 +1065,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 128004880111561613, guid: f67d9f8901984df4b83a88649f01a192, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3616582748495409103, guid: f67d9f8901984df4b83a88649f01a192, type: 3}
       propertyPath: countdownText
       value: 
@@ -1117,6 +1121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5880682448825246270, guid: f67d9f8901984df4b83a88649f01a192, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1409624127361213085, guid: 9a7916bc42c515b45a5172bc9119a5aa, type: 3}
     - target: {fileID: 6063492159394087320, guid: f67d9f8901984df4b83a88649f01a192, type: 3}
       propertyPath: m_Name
       value: Square

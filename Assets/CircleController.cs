@@ -1,27 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
 
 public class CircleController : MonoBehaviour
 {
-    // Start is called before the first frame update
     private int direction = 1;
-    private float movespeed = 3;
+    private float moveSpeed = 3;
+    // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
+    }
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
         Vector3 movement = new Vector3(0f, direction, 0f);
-        transform.Translate(movement * movespeed * Time.deltaTime);
-
-        if(transform.position.y >= 1.3f ||  transform.position.y <= -1.2f)
+        transform.Translate(movement * moveSpeed * Time.deltaTime);
+        if (transform.position.y > 1.5f || transform.position.y < -1.3f)
         {
             direction *= -1;
+        }
+    }
+
+    public int scoreValue = 10;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            
+            ScoreController.Instance.IncreaseScore(scoreValue);
+
+            
+            Destroy(gameObject); 
+            Destroy(collision.gameObject); 
         }
     }
 }
