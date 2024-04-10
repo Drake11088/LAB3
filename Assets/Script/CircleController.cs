@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class CircleController : MonoBehaviour
     {
         Vector3 movement = new Vector3(0f, direction, 0f);
         transform.Translate(movement * moveSpeed * Time.deltaTime);
-        if (transform.position.y > 1.5f || transform.position.y < -1.3f)
+        if (transform.position.y > 1.5f || transform.position.y < -1.5f)
         {
             direction *= -1;
         }
@@ -28,12 +28,12 @@ public class CircleController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            
-            ScoreController.Instance.IncreaseScore(scoreValue);
+            // Tăng điểm số khi viên đạn va chạm vào mục tiêu
 
-            
-            Destroy(gameObject); 
-            Destroy(collision.gameObject); 
+
+            // Biến mục tiêu và viên đạn biến mất
+            Destroy(gameObject); // Mục tiêu
+            Destroy(collision.gameObject); // Viên đạn
         }
     }
 }

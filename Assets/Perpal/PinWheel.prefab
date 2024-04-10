@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8082687822672629816}
   m_Layer: 0
   m_Name: PinWheel
-  m_TagString: Untagged
+  m_TagString: PinWheel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

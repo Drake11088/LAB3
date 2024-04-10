@@ -8,7 +8,20 @@ public class TimeManager : MonoBehaviour
     public float totalTime = 10.0f; // Thời gian chơi tổng cộng
     private float currentTime = 0;
     private bool isGameOver = false;
+    public PlayerData playerData;
+    void Start()
+    {
+        playerData.playerLevel = 0;
+        playerData.playerScore = 0;
 
+        if (PlayerPrefs.HasKey("PlayerLevel"))
+        {
+            PlayerPrefs.SetInt("PlayerLevel", 0);
+            PlayerPrefs.SetInt("PlayerScore", 0);
+
+
+        }
+    }
     void Update()
     {
         if (!isGameOver)
@@ -36,7 +49,7 @@ public class TimeManager : MonoBehaviour
     {
         isGameOver = true;
 
-        
+        // Hiển thị màn hình Game Over, có thể thực hiện thông qua việc kích hoạt một panel Game Over trong Canvas
         Debug.Log("Game Over!");
     }
 }

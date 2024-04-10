@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Assightment.unity
     guid: 45fa6c0cbb6f47142815ebb02bb3b1d8
   - enabled: 1
-    path: Assets/Scenes/YOUWIN.unity
-    guid: e671e223c3543704abaa2d0401363b3b
+    path: Assets/Scenes/Assightment2.unity
+    guid: 58f9adb929f6a744ca33f200408e76cf
+  - enabled: 1
+    path: Assets/Scenes/Assightment3.unity
+    guid: a3ce5c43567fee14290801e5940dca06
+  - enabled: 1
+    path: Assets/Scenes/Assightment4.unity
+    guid: 2eb08fa32a9e14246a1a833f78b8fba4
   m_configObjects: {}

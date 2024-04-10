@@ -10,6 +10,7 @@ TagManager:
   - MapEdge
   - PinWheel
   - Bullet
+  - Trap
   layers:
   - Default
   - TransparentFX
