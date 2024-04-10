@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Assightment4.unity
     guid: 2eb08fa32a9e14246a1a833f78b8fba4
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 5a0f8f2b109fe2c4587de2ec0b44b329
   m_configObjects: {}
